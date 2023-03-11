@@ -57,9 +57,12 @@ section {
 
 .accordion :target label + div {
     height: 320px;
-    color: #000000;
-
+    /* color: #000000; */
 }
+
+
+
+
 .accordion :hover label + div {
     height: 320px;
     color: #000000;
@@ -116,6 +119,11 @@ section {
     margin: 1vh;
 }
 
-img{
-    /* width: 320px; */
+.faq-title{
+display: flex;
+    justify-content: space-between;
+}
+
+.icons {
+width: 2vh;
 }
