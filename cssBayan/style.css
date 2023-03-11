@@ -5,11 +5,10 @@ body{
     font-size: 2vh;
     font-weight: 600;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 100vh;
 }
-a {
-    text-decoration: none;
-    color: #0150C3;
-}
+
+
 p{
     font-size: 3vh;
 }
@@ -20,6 +19,7 @@ section {
     width: 60vh;
     padding: 5vh;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .accordion label, .accordion p {
@@ -28,99 +28,22 @@ section {
 .accordion p {
     padding: 1vh;
 }
-.accordion label a {
-    display: block;
-    position: relative;
-    padding: 2vh;
-}
-.accordion label a:hover {
-    background: #EEEEFF;
 
-}
+
 .accordion .mem-img {
     height: 0;
     color: blue;
     overflow: hidden;
     transition: height  0.1s ease-in-out;
 }
-.accordion :target label a:after {
-    content: '';
-    position: absolute;
-    right: 2vh;
-    top: 50%;
-    margin-top: -0.1vh;
-    border-top: 1vh solid #333;
-    border-left: 1vh solid transparent;
-    border-right: 1vh solid transparent;
-
-}
-
-.accordion :target label + div {
-    height: 30vh;
-    /* color: #000000; */
-}
 
 
 
-
-.accordion :hover label + div {
-    height: 30vh;
-    color: #000000;
-
-}
-/* ============================ */
-
-.accordion :hover  label {
-    color: #000000;
-}
-
-.accordion :hover ~ section   .icons {
-    display:block;
-}
-.accordion :hover ~ section label {
-    color: #000000;
-}
-/* .accordion :hover ~ body label {
-    color: #000000;
-} */
-
-
-.accordion :target label {
-    color: #000000;
-}
-
-
-
-.faq-input {
-    width: 0;
-    height: 0;
-    -webkit-appearance: none;
-    appearance: none;
-    position: absolute;
-}
 
 .icons {
 display:none;
 
 }
-
-
-.faq-input:checked ~ .faq-title {
-    background-color: #b91125;
-}
-
-.faq-input:checked ~ .faq-title:after {
-    border-style: solid;
-    border-width: 0 1vh 2vh 1vh;
-    border-color: transparent transparent #fff transparent;
-    background-color: #b91125;
-
-}
-
-.faq-input:checked ~ .faq-text {
-    display: block;
-}
-
 
 .mem-img {
     display: flex;
@@ -136,3 +59,75 @@ display: flex;
 .icons {
 width: 2vh;
 }
+
+.faq-title:after {
+    /* content: "";
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%); */
+}
+
+
+
+.faq-input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* height: 0; */
+    /* -webkit-appearance: none;
+    appearance: none; */
+    position: absolute;
+}
+
+.faq-input:checked ~ .faq-title {
+
+}
+
+.faq-input:checked ~ .faq-text > img {
+    height: 30vh;
+}
+/*
+.faq-input:focus ~ .faq-text > img {
+    height: 30vh;
+} */
+
+.faq-input:hover ~ .faq-text > img {
+    height: 30vh;
+
+}
+/*
+.faq-title:hover ~ .faq-text > img {
+    height: 30vh;
+}
+
+.faq-text:hover ~ .faq-text > img {
+    height: 30vh;
+} */
+
+
+
+
+/* .faq-input:checked ~ .faq-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #fff transparent;
+} */
+
+
+.faq-text {
+     display: flex;
+    justify-content: center;
+
+}
+img{
+    height: 0;
+    margin: .5vh;
+    overflow: hidden;
+    transition: height .1s ease-out;
+}
+
+
