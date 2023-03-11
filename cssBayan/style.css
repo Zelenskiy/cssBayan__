@@ -1,0 +1,121 @@
+body{
+    color: #000000;
+    background-color: #F5F5EB;
+    text-decoration: none;
+    font-size: 2vh;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #0150C3;
+}
+p{
+    font-size: 3vh;
+}
+section {
+    display: block;
+}
+.accordion {
+    width: 60vh;
+    padding: 5vh;
+    margin: 0 auto;
+}
+
+.accordion label, .accordion p {
+    margin: 0;
+}
+.accordion p {
+    padding: 1vh;
+}
+.accordion label a {
+    display: block;
+    position: relative;
+    padding: 2vh;
+}
+.accordion label a:hover {
+    background: #EEEEFF;
+
+}
+.accordion .mem-img {
+    height: 0;
+    color: blue;
+    overflow: hidden;
+    transition: height  0.1s ease-in-out;
+}
+.accordion :target label a:after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -3px;
+    border-top: 1vh solid #333;
+    border-left: 1vh solid transparent;
+    border-right: 1vh solid transparent;
+
+}
+
+.accordion :target label + div {
+    height: 320px;
+    color: #000000;
+
+}
+.accordion :hover label + div {
+    height: 320px;
+    color: #000000;
+}
+/* ============================ */
+
+.accordion :hover  label {
+    color: #000000;
+}
+.accordion :hover ~ section label {
+    color: #000000;
+}
+/* .accordion :hover ~ body label {
+    color: #000000;
+} */
+
+
+.accordion :target label {
+    color: #000000;
+}
+
+
+
+/* .faq-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+} */
+
+
+
+.faq-input:checked ~ .faq-title {
+    background-color: #b91125;
+}
+
+.faq-input:checked ~ .faq-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #fff transparent;
+    background-color: #b91125;
+
+}
+
+.faq-input:checked ~ .faq-text {
+    display: block;
+}
+
+
+.mem-img {
+    display: flex;
+    justify-content: center;
+    margin: 1vh;
+}
+
+img{
+    /* width: 320px; */
+}
