@@ -2,17 +2,18 @@ body {
   color: #000000;
   background-color: #f5f5eb;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 2vw;
   font-weight:900;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
-p {
+/* p {
   font-size: 3em;
-  /* font-weight: 1200; */
-}
+  font-weight: 1200;
+} */
+
 section {
   display: block;
 }
@@ -34,14 +35,14 @@ img {
   transition: height .1s ease-out;
 }
 .accordion {
-  width: 70em;
-  padding: 5em;
+  width: 35em;
+  padding: 1em;
   margin: 0 auto;
   cursor: pointer;
 }
 
 .faq-box {
-  width: 70em;
+  width: auto;
 }
 
 .memtext {
@@ -58,7 +59,7 @@ input {
   margin: 0;
 }
 .accordion p {
-  padding: 1vh;
+  padding: .5em;
 }
 
 
