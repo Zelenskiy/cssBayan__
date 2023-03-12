@@ -143,6 +143,7 @@ input:checked + label .icons {
     height: 25rem;
   }
 
+
   input:checked + label .faq-text,
   img {
     height: 25rem;
