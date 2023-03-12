@@ -6,14 +6,10 @@ body {
   font-weight: 900;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  /* min-height: 100vh; */
   margin: 2rem;
 }
 
-/* p {
-  font-size: 3em;
-  font-weight: 1200;
-} */
+
 
 section {
   display: block;
