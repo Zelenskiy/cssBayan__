@@ -2,15 +2,16 @@ body {
   color: #000000;
   background-color: #f5f5eb;
   text-decoration: none;
-  font-size: 2vh;
-  font-weight: 600;
+  font-size: 1.2em;
+  font-weight:900;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   min-height: 100vh;
 }
 
 p {
-  font-size: 3vh;
+  font-size: 3em;
+  /* font-weight: 1200; */
 }
 section {
   display: block;
@@ -19,7 +20,6 @@ section {
 .accordion .faq-text,
 img {
   height: 0;
-  color: blue;
   overflow: hidden;
   transition: height 0.9s linear;
 }
@@ -29,19 +29,19 @@ img {
 }
 img {
   height: 0;
-  margin: 0.5vh;
+  margin: 0.5em;
   overflow: hidden;
-  transition: height 0.1s ease-out;
+  transition: height .1s ease-out;
 }
 .accordion {
-  width: 60vh;
-  padding: 5vh;
+  width: 70em;
+  padding: 5em;
   margin: 0 auto;
   cursor: pointer;
 }
 
 .faq-box {
-  width: 35em;
+  width: 70em;
 }
 
 .memtext {
@@ -61,13 +61,9 @@ input {
   padding: 1vh;
 }
 
-.faq-title {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .icons {
-
   background-image: url("images/cross.png");
   background-size: cover;
   width: 1em;
@@ -75,6 +71,12 @@ input {
   visibility: hidden;
 }
 
+.faq-title {
+  color: #5888E0;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
 .faq-title {
   display: flex;
   justify-content: space-between;
@@ -84,19 +86,27 @@ input {
   visibility: visible;
 }
 
+.accordion:hover .faq-title {
+  color: #000;
+transition: color .5s ease;
+}
+
+
 section:hover .faq-text,
 img {
-  height: 30vh;
+  height: 20em;
   margin-top: -0.5em;
   color: #000;
   padding: 1em 2em 1em;
 }
 
+
+
 input:checked + label .faq-text,
 img {
-  height: 30vh;
+  height: 20em;
   margin-top: -0.5em;
-  color: #000;
+  color: #5888E0;
   padding: 1em 2em 1em;
 }
 
@@ -104,5 +114,5 @@ input:checked + label .icons {
   background-image: url("images/plus.png");
   width: 1em;
   height: 1em;
-
 }
+
