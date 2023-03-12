@@ -3,10 +3,11 @@ body {
   background-color: #f5f5eb;
   text-decoration: none;
   font-size: 2vw;
-  font-weight:900;
+  font-weight: 900;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   /* min-height: 100vh; */
+  margin: 2rem;
 }
 
 /* p {
@@ -16,6 +17,13 @@ body {
 
 section {
   display: block;
+}
+
+.accordion,
+.faq-text,
+.faq-title,
+img {
+  cursor: pointer;
 }
 
 .accordion .faq-text,
@@ -30,13 +38,13 @@ img {
 }
 img {
   height: 0;
-  margin: 0.5em;
+  margin: 0.5rem;
   overflow: hidden;
-  transition: height .1s ease-out;
+  transition: height 0.1s ease-out;
 }
 .accordion {
-  width: 35em;
-  padding: 1em;
+  width: auto;
+  padding: 1rem;
   margin: 0 auto;
   cursor: pointer;
 }
@@ -59,22 +67,20 @@ input {
   margin: 0;
 }
 .accordion p {
-  padding: .5em;
+  padding: 0.5rem;
 }
 
-
-
 .icons {
-  background-image: url("images/cross.png");
+  background-image: url("images/plus.png");
   background-size: cover;
-  width: 1em;
-  height: 1em;
+  width: 1rem;
+  height: 1rem;
   visibility: hidden;
 }
 
 .faq-title {
-  color: #5888E0;
-  padding: 1em;
+  color: #5888e0;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -89,31 +95,96 @@ input {
 
 .accordion:hover .faq-title {
   color: #000;
-transition: color .5s ease;
+  transition: color 0.5s ease;
 }
-
 
 section:hover .faq-text,
 img {
-  height: 20em;
-  margin-top: -0.5em;
+  height: 50rem;
+  margin-top: -0.5rem;
   color: #000;
-  padding: 1em 2em 1em;
+  padding: 1rem 2rem 1rem;
 }
-
-
 
 input:checked + label .faq-text,
 img {
-  height: 20em;
-  margin-top: -0.5em;
-  color: #5888E0;
-  padding: 1em 2em 1em;
+  height: 50rem;
+  margin-top: -0.5rem;
+  color: #5888e0;
+  padding: 1rem 2rem 1rem;
 }
 
 input:checked + label .icons {
-  background-image: url("images/plus.png");
-  width: 1em;
-  height: 1em;
+  background-image: url("images/cross.png");
+  width: 1rem;
+  height: 1rem;
 }
 
+@media (max-width: 1270px) {
+  .accordion label {
+    font-size: 2.5vw;
+  }
+  section:hover .faq-text,
+  img {
+    height: 30rem;
+  }
+
+  input:checked + label .faq-text,
+  img {
+    height: 30rem;
+  }
+}
+@media (max-width: 819px) {
+  .accordion label {
+    font-size: 3vw;
+  }
+  section:hover .faq-text,
+  img {
+    height: 25rem;
+  }
+
+  input:checked + label .faq-text,
+  img {
+    height: 25rem;
+  }
+
+  section:hover .faq-text,
+  img {
+    height: 15rem;
+    padding: 1rem 0 0 0;
+  }
+
+  input:checked + label .faq-text,
+  img {
+    height: 15rem;
+    padding: 1rem 0 0 0;
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 6vw;
+  }
+  .accordion label {
+    font-size: 4vw;
+  }
+  section:hover .faq-text,
+  img {
+    height: 30rem;
+  }
+
+  input:checked + label .faq-text,
+  img {
+    height: 30rem;
+  }
+  section:hover .faq-text,
+  img {
+    height: 15rem;
+    padding: 1rem 0 0 0;
+  }
+
+  input:checked + label .faq-text,
+  img {
+    height: 15rem;
+    padding: 1rem 0 0 0;
+  }
+}
